@@ -1,0 +1,438 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #3438b5;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Sin zoom en el index */
+.index-page img:hover {
+  transform: none;
+}
+
+/* Clip zoom: cada img-wrap recorta el transform al borde exacto de la imagen */
+.img-wrap {
+  overflow: hidden;
+}
+
+/* Clip zoom en contenedores con imagen única */
+.vinilo-top__right,
+.vinilo-small-row,
+.tragos-mid__left,
+.hostil-mid__right,
+.china-top__imgs,
+.proj-img-wrap {
+  overflow: hidden;
+}
+
+/* ===== TIPOGRAFÍA ===== */
+.display {
+  font-family: 'bebas neue', sans-serif;
+  font-size: clamp(72px, 11vw, 170px);
+  line-height: 0.88;
+  color: #3438b5;
+  letter-spacing: 1px;
+}
+
+.display-sm {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 7vw, 110px);
+  line-height: 0.9;
+  color: #3438b5;
+}
+
+h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #3438b5;
+  margin-bottom: 0.6rem;
+}
+
+.vertical-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-family: 'Bebas Neue', sans-serif;
+  color: #3438b5;
+}
+
+.deco {
+  font-size: 1.8rem;
+  color: #3438b5;
+}
+
+/* ===== DIVISORES ===== */
+section {
+  border-top: 2px solid #3438b5;
+}
+
+
+/* ===== INTRO ===== */
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#intro img {
+  width: min(42vw, 540px);
+  height: auto;
+  object-fit: initial;
+}
+
+.intro-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.intro-hint__text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #3438b5;
+}
+
+.intro-hint__arrow {
+  font-size: 22px;
+  color: #3438b5;
+  animation: bounce 1.4s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-7px); }
+}
+
+/* Bloquea el scroll del fondo mientras el intro está activo */
+body.intro-active {
+  overflow: hidden;
+}
+
+/* ===== LOGO ===== */
+.hero-logo {
+  width: 80px;
+  height: auto;
+  object-fit: initial;
+  display: block;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  min-height: 100vh;
+}
+
+.hero-title {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px solid #3438b5;
+}
+
+.hero-deco-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-bottom: 1.5rem;
+}
+
+.hero-deco-lines span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #3438b5;
+}
+
+.hero-bottom {
+  padding-top: 2rem;
+}
+
+.hero-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(22px, 2.5vw, 36px);
+  color: #3438b5;
+  letter-spacing: 4px;
+}
+
+.hero-email {
+  font-size: 11px;
+  color: #333;
+  margin-top: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.hero-email a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero-email span {
+  cursor: pointer;
+  transition: font-weight 0.1s;
+}
+
+.hero-email span:hover {
+  font-weight: 700;
+}
+
+.hero-divider {
+  border-right: 2px solid #3438b5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-column: 2 / -1;
+}
+
+.hero-photo {
+  overflow: hidden;
+  height: 100%;
+  padding: 2rem 0;
+}
+
+.hero-photo img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.hero-caption {
+  border-top: 2px solid #3438b5;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-role {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(18px, 2vw, 30px);
+  color: #3438b5;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.hero-quote {
+  font-size: 11px;
+  color: #333;
+  text-align: right;
+  line-height: 1.6;
+}
+
+
+/* ===== SOBRE MÍ ===== */
+.about {
+  display: grid;
+  grid-template-columns: auto 38% 1fr;
+  min-height: 70vh;
+}
+
+.about-title-col {
+  padding: 3rem;
+  border-right: 2px solid #3438b5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-photo {
+  border-right: 2px solid #3438b5;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.about-photo img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.about-text p {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.85;
+}
+
+
+/* ===== PROYECTOS ===== */
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-header {
+  padding: 2rem 3rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: start;
+  padding-top: 2rem;
+}
+
+.proj-card {
+  border-right: 1px solid #d0d0d0;
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-card:last-child {
+  border-right: none;
+}
+
+.proj-img-wrap {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.proj-card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.proj-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.proj-hover p {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(18px, 2vw, 30px);
+  color: #3438b5;
+  letter-spacing: 2px;
+  line-height: 1.15;
+}
+
+.proj-img-wrap:hover .proj-hover {
+  opacity: 1;
+}
+
+
+/* ===== EXPERIENCIA ===== */
+.exp {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  min-height: 70vh;
+}
+
+.exp-title-col {
+  padding: 3rem;
+  border-right: 2px solid #3438b5;
+  display: flex;
+  align-items: flex-start;
+}
+
+.exp-text {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+  align-content: start;
+}
+
+.exp-block--wide {
+  grid-column: 1 / -1;
+}
+
+.exp-block p {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.7;
+  margin-top: 0.3rem;
+}
+
+.exp-block a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.edu-hover {
+  cursor: pointer;
+}
+
+.edu-hover:hover {
+  text-decoration: underline;
+}
+
+
+/* ===== FOOTER ===== */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.site-footer__link {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #3438b5;
+  text-decoration: none;
+}
+
+.site-footer__link:hover {
+  text-decoration: underline;
+}
+
+.site-footer__name {
+  font-size: 11px;
+  color: #3438b5;
+  letter-spacing: 1px;
+}
+
+

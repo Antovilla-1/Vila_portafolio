@@ -1,0 +1,57 @@
+/* ===== IMÁGENES ===== */
+.tragos-top img,
+.tragos-mid__left img,
+.tragos-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== FILA SUPERIOR: 3 imágenes ===== */
+.tragos-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 480px;
+  border-bottom: 2px solid #3438b5;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* ===== SECCIÓN MEDIA: imagen grande + texto ===== */
+.tragos-mid {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: 760px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #3438b5;
+}
+
+.tragos-mid__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== CONTENIDO DERECHA ===== */
+.tragos-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tragos-desc {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.85;
+}
+
+/* ===== FILA INFERIOR: 3 imágenes a ancho completo ===== */
+.tragos-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 480px;
+  padding-top: 16px;
+}

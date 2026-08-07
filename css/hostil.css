@@ -1,0 +1,66 @@
+/* ===== IMÁGENES ===== */
+.hostil1, .hostil2, .hostil3,
+.hostil4, .hostil5, .hostil6, .hostil7,
+.hostil8, .hostil9, .hostil10, .hostil11 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== FILA SUPERIOR: 3 imágenes ===== */
+.hostil-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #3438b5;
+}
+
+/* ===== SECCIÓN MEDIA ===== */
+.hostil-mid {
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+  border-bottom: 2px solid #3438b5;
+  padding-top: 16px;
+}
+
+/* Columna izquierda: imagen arriba + texto abajo */
+.hostil-mid__left {
+  display: grid;
+  grid-template-rows: 300px 1fr;
+}
+
+.hostil-text {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hostil-desc {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.85;
+}
+
+/* Columna centro: 2 imágenes apiladas */
+.hostil-mid__center {
+  display: grid;
+  grid-template-rows: 360px 360px;
+}
+
+/* Columna derecha: 1 imagen alta */
+.hostil-mid__right {
+  display: flex;
+  padding-bottom: 16px;
+}
+
+/* ===== FILA INFERIOR: 4 imágenes ===== */
+.hostil-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 360px;
+  padding-top: 16px;
+}

@@ -1,0 +1,108 @@
+/* ===== PLACEHOLDERS ===== */
+.img-placeholder {
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: #c0c0c0;
+  letter-spacing: 2px;
+}
+
+.img-placeholder--full {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* ===== IMÁGENES ===== */
+.vinilo1,
+.vinilo2,
+.vinilo3,
+.vinilo4,
+.vinilo5,
+.vinilo6,
+.vinilo7,
+.vinilo8 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== SECCIÓN SUPERIOR ===== */
+.vinilo-top {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  border-bottom: 2px solid #3438b5;
+  padding-top: 16px;
+}
+
+.vinilo-top__left {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.vinilo-desc {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.85;
+  margin-top: 2rem;
+}
+
+.vinilo-small-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 240px;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.vinilo-small-row .img-placeholder {
+  border-right: 2px solid #d0d0d0;
+}
+
+.vinilo-small-row .img-placeholder:last-child {
+  border-right: none;
+}
+
+.vinilo-top__right {
+  display: flex;
+  min-height: 560px;
+  padding-bottom: 16px;
+}
+
+/* ===== FILA MEDIA ===== */
+.vinilo-mid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #3438b5;
+}
+
+.vinilo-mid .img-placeholder {
+  border-right: 1px solid #d0d0d0;
+}
+
+.vinilo-mid .img-placeholder:last-child {
+  border-right: none;
+}
+
+/* ===== FILA INFERIOR ===== */
+.vinilo-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 618px;
+  padding-top: 16px;
+}
+
+.vinilo-bottom .img-placeholder {
+  border-right: 1px solid #d0d0d0;
+}
+
+.vinilo-bottom .img-placeholder:last-child {
+  border-right: none;
+}

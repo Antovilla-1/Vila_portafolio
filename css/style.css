@@ -478,7 +478,7 @@ body.intro-active {
     border-bottom: 2px solid #3438b5;
     padding: 2.2rem 1.5rem;
     justify-content: flex-start;
-    min-height: 65vh;
+    min-height: 40vh;
   }
 
   .hero-logo {

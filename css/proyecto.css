@@ -92,3 +92,46 @@
   line-height: 1.85;
   max-width: 600px;
 }
+
+/* ===== RESPONSIVE / MOBILE ===== */
+@media (max-width: 900px) {
+  .proj-nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .proj-nav__back img {
+    width: 50px;
+  }
+
+  .proj-nav__title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: right;
+  }
+
+  .proj-hero {
+    height: 40vh;
+  }
+
+  .proj-info {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .proj-info__meta {
+    border-right: none;
+    border-bottom: 2px solid #3438b5;
+    padding: 2rem 1.5rem;
+  }
+
+  .proj-info__desc {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .proj-nav__title {
+    max-width: 55vw;
+    font-size: 10px;
+  }
+}

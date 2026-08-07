@@ -52,3 +52,36 @@
   padding-top: 16px;
   padding-bottom: 16px;
 }
+
+/* ===== RESPONSIVE / MOBILE ===== */
+@media (max-width: 900px) {
+  .china-top {
+    grid-template-columns: 1fr;
+  }
+
+  .china-top__imgs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px;
+  }
+
+  .china-top__text {
+    padding: 2rem 1.5rem;
+  }
+
+  .china-mid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 280px);
+  }
+
+  .china-bottom {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 280px);
+  }
+}
+
+@media (max-width: 560px) {
+  .china-top__imgs {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 220px);
+  }
+}

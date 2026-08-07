@@ -55,3 +55,29 @@
   grid-template-rows: 480px;
   padding-top: 16px;
 }
+
+/* ===== RESPONSIVE / MOBILE ===== */
+@media (max-width: 900px) {
+  .tragos-top {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 260px);
+  }
+
+  .tragos-mid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .tragos-mid__left {
+    height: 300px;
+  }
+
+  .tragos-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .tragos-bottom {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 260px);
+  }
+}

@@ -436,3 +436,145 @@ body.intro-active {
 }
 
 
+/* ===== RESPONSIVE / MOBILE ===== */
+@media (max-width: 900px) {
+
+  .display {
+    font-size: clamp(44px, 13vw, 100px);
+  }
+
+  .display-sm {
+    font-size: clamp(34px, 10vw, 80px);
+  }
+
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-title {
+    border-right: none;
+    border-bottom: 2px solid #3438b5;
+    padding: 2.2rem 1.5rem;
+  }
+
+  .hero-right {
+    grid-column: auto;
+  }
+
+  .hero-photo {
+    height: 60vh;
+    padding: 0;
+  }
+
+  .hero-caption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 1.4rem 1.5rem;
+  }
+
+  .hero-quote {
+    text-align: left;
+  }
+
+  /* SOBRE MÍ */
+  .about {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .about-title-col {
+    border-right: none;
+    border-bottom: 2px solid #3438b5;
+    padding: 2.2rem 1.5rem;
+  }
+
+  .about-photo {
+    border-right: none;
+    border-bottom: 2px solid #3438b5;
+    height: 55vh;
+    padding: 0;
+  }
+
+  .about-text {
+    padding: 2.2rem 1.5rem;
+  }
+
+  /* PROYECTOS */
+  .projects-header {
+    padding: 2.2rem 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0;
+  }
+
+  .proj-card {
+    border-right: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .proj-img-wrap,
+  .proj-card img {
+    height: 220px;
+  }
+
+  /* EXPERIENCIA */
+  .exp {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .exp-title-col {
+    border-right: none;
+    border-bottom: 2px solid #3438b5;
+    padding: 2.2rem 1.5rem;
+  }
+
+  .exp-text {
+    grid-template-columns: 1fr;
+    padding: 2.2rem 1.5rem;
+    gap: 1.8rem;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    padding: 1.3rem 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-card {
+    border-right: none;
+  }
+
+  .proj-img-wrap,
+  .proj-card img {
+    height: 260px;
+  }
+
+  .hero-title,
+  .about-title-col,
+  .exp-title-col,
+  .about-text,
+  .exp-text,
+  .projects-header {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}
+
+

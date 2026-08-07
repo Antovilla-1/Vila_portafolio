@@ -357,8 +357,28 @@ body.intro-active {
   line-height: 1.15;
 }
 
-.proj-img-wrap:hover .proj-hover {
-  opacity: 1;
+/* Solo activa el hover con opacidad total en dispositivos con mouse real */
+@media (hover: hover) and (pointer: fine) {
+  .proj-img-wrap:hover .proj-hover {
+    opacity: 1;
+  }
+}
+
+/* En celular/tablet (sin mouse), muestra el nombre como franja fija abajo,
+   sin tapar la foto con el overlay blanco */
+@media (hover: none), (pointer: coarse) {
+  .proj-hover {
+    opacity: 1;
+    inset: auto 0 0 0;
+    background: rgba(52, 56, 181, 0.85);
+    padding: 0.7rem 1rem;
+  }
+
+  .proj-hover p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.25;
+  }
 }
 
 
@@ -457,6 +477,11 @@ body.intro-active {
     border-right: none;
     border-bottom: 2px solid #3438b5;
     padding: 2.2rem 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .hero-title .display {
+    margin: auto 0;
   }
 
   .hero-right {
